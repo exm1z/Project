@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фінансовий журнал</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Фінансовий журнал</h1>
+  </header>
+
+  <main>
+    <div class="stats">
+      <div class="card">
+        <p>Доходи</p>
+        <h2>0 грн</h2>
+      </div>
+
+      <div class="card">
+        <p>Витрати</p>
+        <h2>0 грн</h2>
+      </div>
+
+      <div class="card">
+        <p>Баланс</p>
+        <h2>0 грн</h2>
+      </div>
+    </div>
+
+    <section>
+      <h2>Додати операцію</h2>
+
+      <form>
+        <select>
+          <option>Дохід</option>
+          <option>Витрата</option>
+        </select>
+
+        <input type="text" placeholder="Категорія">
+        <input type="number" placeholder="Сума">
+        <input type="date">
+
+        <button type="button">Додати</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Історія операцій</h2>
+      <div class="empty">Записів поки немає</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
