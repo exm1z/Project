@@ -15,40 +15,48 @@
     <div class="stats">
       <div class="card">
         <p>Доходи</p>
-        <h2>0 грн</h2>
+        <h2 id="totalIncome" class="income">0 грн</h2>
       </div>
 
       <div class="card">
         <p>Витрати</p>
-        <h2>0 грн</h2>
+        <h2 id="totalExpense" class="expense">0 грн</h2>
       </div>
 
       <div class="card">
         <p>Баланс</p>
-        <h2>0 грн</h2>
+        <h2 id="balance" class="balance">0 грн</h2>
+      </div>
+
+      <div class="card">
+        <p>Кількість записів</p>
+        <h2 id="recordsCount" class="count">0</h2>
       </div>
     </div>
 
     <section>
       <h2>Додати операцію</h2>
+      <p class="subtitle">Заповніть дані фінансової операції</p>
 
-      <form>
-        <select>
-          <option>Дохід</option>
-          <option>Витрата</option>
+      <form id="financeForm">
+        <select id="type">
+          <option value="income">Дохід</option>
+          <option value="expense">Витрата</option>
         </select>
 
-        <input type="text" placeholder="Категорія">
-        <input type="number" placeholder="Сума">
-        <input type="date">
+        <input id="category" type="text" placeholder="Категорія">
+        <input id="amount" type="number" placeholder="Сума">
+        <input id="date" type="date">
 
-        <button type="button">Додати</button>
+        <button type="submit">Додати</button>
       </form>
     </section>
 
     <section>
       <h2>Історія операцій</h2>
-      <div class="empty">Записів поки немає</div>
+      <div id="recordsList">
+        <div class="empty">Записів поки немає</div>
+      </div>
     </section>
   </main>
 
