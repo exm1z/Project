@@ -65,7 +65,7 @@ section {
 
 form {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 12px;
 }
 
@@ -87,24 +87,26 @@ button {
 button:hover {
   background: #1d4ed8;
 }
-.empty {
-  padding: 20px;
-  text-align: center;
-  color: #666;
-  background: #f8fafc;
-  border-radius: 10px;
+.secondary {
+  background: #64748b;
+}
+.secondary:hover {
+  background: #475569;
+}
+#cancelEditBtn {
+  display: none;
 }
 
-@media (max-width: 900px) {
-  .stats,
-  form {
-    grid-template-columns: 1fr;
-  }
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
 }
 
 .record {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr 0.9fr 0.9fr auto;
   gap: 10px;
   align-items: center;
   padding: 14px;
@@ -119,23 +121,41 @@ button:hover {
 .record.expense-record {
   border-left-color: #dc2626;
 }
-.filters {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 12px;
-  margin-bottom: 15px;
+.record small {
+  display: block;
+  color: #6b7280;
+  margin-top: 4px;
 }
-.record {
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+.record-buttons {
+  display: flex;
+  gap: 8px;
 }
-.record button {
-  background: #dc2626;
+.record-buttons button {
   margin: 0;
+}
+.delete-btn {
+  background: #dc2626;
+}
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  background: #f8fafc;
+  border-radius: 10px;
 }
 
 @media (max-width: 900px) {
+  .stats,
+  form,
   .filters,
   .record {
     grid-template-columns: 1fr;
+  }
+  .record-buttons {
+    flex-direction: column;
   }
 }

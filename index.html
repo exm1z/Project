@@ -35,7 +35,7 @@
     </div>
 
     <section>
-      <h2>Додати операцію</h2>
+      <h2 id="formTitle">Додати операцію</h2>
       <p class="subtitle">Оберіть тип, категорію, суму та дату</p>
 
       <form id="financeForm">
@@ -47,20 +47,24 @@
         <select id="category"></select>
         <input id="amount" type="number" placeholder="Сума">
         <input id="date" type="date">
+        <input id="comment" type="text" placeholder="Коментар">
 
-        <button type="submit">Додати</button>
+        <button id="submitBtn" type="submit">Додати</button>
+        <button id="cancelEditBtn" class="secondary" type="button">Скасувати</button>
       </form>
     </section>
 
     <section>
       <h2>Історія операцій</h2>
       <div class="filters">
-        <input id="search" type="text" placeholder="Пошук за категорією">
+        <input id="search" type="text" placeholder="Пошук за категорією або коментарем">
         <select id="filterType">
           <option value="all">Усі операції</option>
           <option value="income">Доходи</option>
           <option value="expense">Витрати</option>
         </select>
+        <input id="dateFrom" type="date">
+        <input id="dateTo" type="date">
       </div>
       <div id="recordsList"></div>
     </section>
