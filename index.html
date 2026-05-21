@@ -36,7 +36,7 @@
 
     <section>
       <h2>Додати операцію</h2>
-      <p class="subtitle">Заповніть дані фінансової операції</p>
+      <p class="subtitle">Оберіть тип, категорію, суму та дату</p>
 
       <form id="financeForm">
         <select id="type">
@@ -44,7 +44,7 @@
           <option value="expense">Витрата</option>
         </select>
 
-        <input id="category" type="text" placeholder="Категорія">
+        <select id="category"></select>
         <input id="amount" type="number" placeholder="Сума">
         <input id="date" type="date">
 
@@ -54,12 +54,17 @@
 
     <section>
       <h2>Історія операцій</h2>
-      <div id="recordsList">
-        <div class="empty">Записів поки немає</div>
+      <div class="filters">
+        <input id="search" type="text" placeholder="Пошук за категорією">
+        <select id="filterType">
+          <option value="all">Усі операції</option>
+          <option value="income">Доходи</option>
+          <option value="expense">Витрати</option>
+        </select>
       </div>
+      <div id="recordsList"></div>
     </section>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>

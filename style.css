@@ -119,3 +119,23 @@ button:hover {
 .record.expense-record {
   border-left-color: #dc2626;
 }
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.record {
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+}
+.record button {
+  background: #dc2626;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .filters,
+  .record {
+    grid-template-columns: 1fr;
+  }
+}
